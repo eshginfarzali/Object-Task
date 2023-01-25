@@ -121,7 +121,7 @@ console.log(arr);
 
 
 //case/1
-
+/*
 const myCar = {
     make: "Ford",
     model: "Mustang",
@@ -135,8 +135,62 @@ const myCar = {
   }
 
   
-  
 
 const returnedTarget = Object.assign(myCar, yourCar);
 
 console.log(myCar);
+*/
+
+
+//case/-2 case Object.create()
+/*
+const myCar = {
+    make: "Ford",
+    model: "Mustang",
+    year: 1969,
+  }
+
+ 
+  const returnedTarget = Object.create(myCar);
+
+  returnedTarget.make="BMW"
+  returnedTarget.model="F30"
+returnedTarget.year=2022
+
+console.log(returnedTarget);
+*/
+
+
+
+//case3 Object.entries()
+
+/*
+const myCar = {
+    make: "Ford",
+    model: "Mustang",
+    year: 1969,
+  }
+
+  const entrObj= Object.entries(myCar)
+  console.log(entrObj)
+  */
+
+
+
+  //case 4 Object.freeze(obj);
+/*
+  const myCar = {
+    make: "Ford",
+    model: "Mustang",
+    year: 1969,
+  }
+  Object.freeze(myCar)
+
+  myCar.make="BMW"
+  console.log(myCar)
+  */
+
+
+
+
+  //Task-5
