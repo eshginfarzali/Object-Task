@@ -193,4 +193,17 @@ const myCar = {
 
 
 
-  //Task-5
+  //Task-5  Deep clone an object exactly
+
+
+/*
+  const myCar = {
+    make: "Ford",
+    model: "Mustang",
+    year: 1969,
+  }
+
+  const clone = JSON.parse(JSON.stringify(myCar))
+
+  console.log(clone)
+  */
