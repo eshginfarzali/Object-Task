@@ -207,3 +207,73 @@ const myCar = {
 
   console.log(clone)
   */
+
+
+
+//Task 6 write a function that creates a new object each time(Functional constructor)
+/*
+
+function Person () {
+    this.name = 'John',
+    this.age = 23
+}
+
+const person = new Person();
+
+person.name="Eshgin"
+person.age=28
+console.log(person)
+
+const student = new Person();
+student.name="Doe"
+student.age=20
+
+console.log(student)
+
+*/
+
+
+
+
+//Task-7 Builder pattern
+
+
+let User = function (firstName, lastName, email) {
+
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+}
+
+let UserBuilder = function () {
+
+    let firstName;
+    let lastName;
+    let email;
+
+    return {
+        setFirstName: function (firstName) {
+            this.firstName = firstName;
+            return this;
+        },
+        setLastName: function (lastName) {
+            this.lastName = lastName;
+            return this;
+        },
+        setEmail: function (email) {
+            this.email = email;
+            return this;
+        },
+        info: function () {
+            return `${this.firstName} ${this.lastName}, ${this.email}`;
+        },
+        build: function () {
+            return new User(firstName, lastName, email);
+        }
+    };
+};
+
+var user = new UserBuilder().setFirstName('Eshgin').setLastName('Farzali').setEmail('eshqinferzeliyev@gmail.com');
+console.log(user.info());
+
+
