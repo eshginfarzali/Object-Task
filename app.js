@@ -237,7 +237,7 @@ console.log(student)
 
 //Task-7 Builder pattern
 
-
+/*
 let User = function (firstName, lastName, email) {
 
     this.firstName = firstName;
@@ -277,3 +277,56 @@ var user = new UserBuilder().setFirstName('Eshgin').setLastName('Farzali').setEm
 console.log(user.info());
 
 
+*/
+/*
+setInterval(() => {
+  const date = new Date();
+  const options = {
+    timeZone: 'Asia/Baku',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+  };
+  const azerbaijanDate = date.toLocaleDateString('en-US', options);
+  console.clear()
+  console.log(azerbaijanDate);
+}, 1000);
+*/
+
+/*
+setInterval(() => {
+  const date = new Date();
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+  };
+  const timeZone = ['UTC','Asia/Baku','Europe/London','America/New_York']
+  for(let i=0;i<timeZone.length;i++){
+    options.timeZone = timeZone[i]
+    const globalDate = date.toLocaleDateString('en-US', options);
+
+    console.log(timeZone[i]+': '+globalDate);
+  }
+}, 1000);
+
+*/
+
+
+class person{
+  constructor(name, surname, age){
+
+    this.name=name
+    this.surname=surname
+    this.age=age
+    console.log(`My fullname is ${name } ${surname}. I'm ${age} years old`)
+  }
+}
+
+const eshgin = new person ("Eshgin", "Farzali", 28)
